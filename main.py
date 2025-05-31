@@ -6,3 +6,5 @@ with app.app_context():  # После первого запуска эту ст�
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    
