@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 500px;">
+    <h2 class="text-center mb-4">📝 Регистрация</h2>
+    <form method="post" action="{{ url_for('register') }}">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ form.username.label(class="form-label") }}
+            {{ form.username(class="form-control", placeholder="Имя пользователя") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control", placeholder="Пароль") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.confirm_password.label(class="form-label") }}
+            {{ form.confirm_password(class="form-control", placeholder="Повторите пароль") }}
+        </div>
+
+        <div class="text-center mt-4">
+            {{ form.submit(class="btn btn-success btn-block") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-4 mb-4">🎯 Кликер!</h1>
+    <p class="lead">Количество кликов: <strong>{{ current_user.clicks }}</strong></p>
+    <a href="{{ url_for('click') }}" class="btn btn-lg btn-primary mt-3">Нажми меня 💥</a>
+</div>
+{% endblock %}
